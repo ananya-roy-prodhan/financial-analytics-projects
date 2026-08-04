@@ -4,21 +4,39 @@ import joblib
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 
 st.title("📊 Credit Risk Prediction App")
 
 st.markdown("***From age to income — See how borrower features shape default risk in real time!***")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(
+    BASE_DIR,
+    "logistic_model_with_feature_names.pkl"
+)
+
+scaler_path = os.path.join(
+    BASE_DIR,
+    "scaler.pkl"
+)
+
+data_path = os.path.join(
+    BASE_DIR,
+    "df_no_outlier.pkl"
+)
+
 #log_reg_model = joblib.load("log_reg_model.pkl")
-model_dict = joblib.load("logistic_model_with_feature_names.pkl")
+model_dict = joblib.load(model_path)
 log_reg_model = model_dict['model']
 features_model = model_dict['feature_names']
 
-df = joblib.load("df_no_outlier.pkl") 
+df = joblib.load(data_path)
 #df = model_dict['data_cleaned']
 feature_names = list(df.columns)
-scaler        = joblib.load("scaler.pkl")
+scaler = joblib.load(scaler_path)
 
 
 if df is None or not isinstance(df, pd.DataFrame) or len(df) == 0:
