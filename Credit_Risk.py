@@ -610,7 +610,7 @@ if show_plots:
 
 
 
-  Connecting this trained model to Streamlit app
+#  Connecting this trained model to Streamlit app
  if streamlit_dump:
      import joblib
       joblib.dump(log_reg_model, "log_reg_model.pkl")
