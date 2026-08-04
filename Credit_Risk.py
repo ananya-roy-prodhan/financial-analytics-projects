@@ -611,11 +611,11 @@ if show_plots:
 
 
 #  Connecting this trained model to Streamlit app
- if streamlit_dump:
-     import joblib
-      joblib.dump(log_reg_model, "log_reg_model.pkl")
-     joblib.dump(scaler,"scaler.pkl")
-     joblib.dump({
+if streamlit_dump:
+    import joblib
+    joblib.dump(log_reg_model, "log_reg_model.pkl")
+    joblib.dump(scaler,"scaler.pkl")
+    joblib.dump({
          'model': log_reg_model,
          'feature_names': X_train.columns.tolist()}, "logistic_model_with_feature_names.pkl")
-     joblib.dump(df_no_outlier, "df_no_outlier.pkl")
+    joblib.dump(df_no_outlier, "df_no_outlier.pkl")
