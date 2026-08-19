@@ -47,8 +47,8 @@ Prior default on file was associated with a sharply higher odds ratio for defaul
 
 **Threshold strategy** Rather than relying on a single fixed cutoff, the model was evaluated across a range of probability thresholds, since the right cutoff genuinely depends on how much risk a lender is willing to carry.
 
-- **Conservative Strategy** threshold (around 0.25 to 0.30) flags more borrowers as high risk, catching more potential defaults at the cost of some false alarms. This suits a lender who already has high loan exposure and wants to keep risk appetite low.
-- **Aggressive Strategy** threshold (around 0.50) flags fewer borrowers, approving more loans while accepting a bit more default risk. This suits a lender pursuing aggressive loan book growth, where controlled risk tolerance is an acceptable trade-off for volume.
+- **Conservative Strategy:** A threshold (around 0.25 to 0.30) flags more borrowers as high risk, catching more potential defaults at the cost of some false alarms. This suits a lender who already has high loan exposure and wants to keep risk appetite low.
+- **Aggressive Strategy:** A threshold (around 0.50) flags fewer borrowers, approving more loans while accepting a bit more default risk. This suits a lender pursuing aggressive loan book growth, where controlled risk tolerance is an acceptable trade-off for volume.
 
 ## Practical impact
 This threshold flexibility is what makes the model genuinely usable in underwriting, rather than just an academic classifier. A risk team doesn't have to accept a single one-size-fits-all cutoff, they can dial the threshold up or down depending on current lending strategy, portfolio exposure, or economic conditions, without retraining the model itself. For a lender, that translates directly into practical decisions: which threshold to set for automatic approval versus manual review, how much of the applicant pool to greenlight in a given quarter, and how to balance growth targets against acceptable loss rates, all from the same underlying model.
