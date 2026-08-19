@@ -4,7 +4,7 @@ Predicting a borrower's probability of loan default from application-level data,
 
 ## Overview
 
-Lenders need to assess a borrower's risk of default quickly and consistently, at a volume manual review simply can't handle. This project builds a logistic regression model that predicts the probability of loan default from 12 borrower and loan attributes, then deploys it as a live Streamlit tool that returns a risk score in real time. The dataset covers over 32,000 loan applications, and the final model reaches an AUC of [insert your AUC score, e.g. 0.87], with results validated on a held-out 30% test set.
+Lenders need to assess a borrower's risk of default quickly and consistently, at a volume manual review simply can't handle. This project builds a logistic regression model that predicts the probability of loan default from 12 borrower and loan attributes, then deploys it as a live Streamlit tool that returns a risk score in real time. The dataset covers over 32,000 loan applications, and the final model reaches an AUC of 0.85, with results validated on a held-out 30% test set.
 
 ## The Problem
 
